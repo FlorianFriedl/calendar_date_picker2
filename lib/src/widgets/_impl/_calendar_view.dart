@@ -354,6 +354,7 @@ class _CalendarViewState extends State<_CalendarView> {
               child: _FocusedDate(
                 date: _dayGridFocus.hasFocus ? _focusedDay : null,
                 child: PageView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
                   key: _pageViewKey,
                   controller: _pageController,
                   itemBuilder: _buildItems,
